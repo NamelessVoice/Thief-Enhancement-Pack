@@ -1,0 +1,1 @@
+7z.exe a ep.crf .\ep\* -tzip -mx5

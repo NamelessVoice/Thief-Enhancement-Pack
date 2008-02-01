@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Thief Enhancement Pack</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+h1
+{
+	background-color: #CCCCCC;
+	padding-left: 20px;
+	margin-top: 2em;
+}
+kbd {
+	font-family: "Courier New", Courier, mono;
+	font-weight: bold;
+	color: #000066;
+	font-size: small;
+}
+strong {
+	font-size: xx-large;
+	font-weight: bold;
+	font-variant: normal;
+}
+cite {
+	color: #006600;
+	font-family: "Courier New", Courier, mono;
+	font-style: normal;
+	font-weight: bold;
+	font-size: small;
+}
+blockquote {
+	background-color: #EEEEEE;
+	border: 1px solid;
+	margin-left: 40px;
+	margin-top: 0px;
+}
+.inset {
+	left: 10px;
+	position: relative;
+}
+.inset40 {
+	left: 40px;
+	position: relative;
+	top: 0px;
+}
+
+.deemphasise
+{
+	color: #666666;
+	font-size: 90%;
+}
+
+.CreditsTable
+{
+	margin-left: 40px;
+}
+
+.CreditsTable th
+{
+	text-align: left;
+	font-weight: normal;
+	width: 192px;
+}
+
+-->
+</style>
+</head>
+<body> 
+<p align="center"><font size="+7" face="Carleton, Times New Roman, serif"><u>- Thief Enhancement Pack -</u></font><br>
+	Release 1<br>
+	Tuesday the 1st of January, 2008. </p>
+<h1>What is it?</h1>
+<p>This project is an effort to improve the quality of the graphics in Thief 2: The Metal Age, and also in Thief: The Dark Project and Thief Gold.<br/>The ultimate goal is to replace all the old, low-quality objects and textures from Thief 1 and 2 with versions that have higher polygon counts and texture resolutions, while keeping as close to the originals as possible.</p>
+<h1>Installation instructions:</h1>
+<p>The <i>Enhancement Pack</i> is compatible with Thief 2: The Metal Age, Thief: The Dark Project and Thief Gold.</p>
+<p>To install the <i>Enhancement Pack</i>, you can either use the quick installation method (using the provided batch file to automatically modify any necessary files), or you can modify them manually.</br>
+<b>Using the quick installation process is recommended unless you know what you are doing.</b></p>
+<p>&nbsp;</p>
+<h2>Quick installation</h2>
+<ul>
+<li>Extract this archve (containing EP.crf and InstallEP.bat) into your Thief install folder, be in Thief 2, Thief Gold or Thief 1.</li>
+<li>Run InstallEP.bat.</li>
+</ul>
+<p><i>Note: if you are installing to Thief 1, make sure to 'optimise' your install with DarkLoader to make the game FM-ready before installing the </i>Enhancement Pack.</p>
+<p>&nbsp;</p>
+<span class="deemphasise">
+<h2>Manual installation</h2>
+<p>You can also install the <i>Enhancement Pack</i> manually.<br/>
+First, copy the EP.crf into your Thief install path.  Open DarkInst.cfg (Thief 2) or Install.cfg (Thief 1) in your favourite text editor.  (Note that Windows Notepad may break the formatting of these files, so you should use a better editor such as <a href="http://notepad-plus.sourceforge.net/uk/site.htm" alt="Notepad++">Notepad++</a>).
+Find the line <b>resname_base</b> and add one of the following to it (depending on Thief version), right after the space:</p>
+<p class="inset"><b>Thief 1:</b> .\EP\Thief1+.\EP+</br>
+<b>Thief 2:</b> .\EP+</p>
+<p>That line of the file should now read something like this (Thief 2):</p>
+<p class="inset"><kbd>resname_base <span style="color: red;">.\EP+</span>.\Res</kbd></p>
+<p>...or like this (Thief 1):</p>
+<p class="inset"><kbd>resname_base <span style="color: red;">.\EP\Thief1+.\EP+</span>.\Crfs</kbd></p>
+</p>
+<p>Finally, if you are installing to Thief 1, open Dark.cfg and make sure that both the lines <b>ObjTextures16</b> and <b>MeshTextures16</b> are somewhere in that file, on a line of their own.  Also make sure that there is one empty line at the end of the file.
+</span>
+<p>&nbsp;</p>
+<h2>Uninstallation</h2>
+<p>To uninstall the <i>Enhancement Pack</i>, simply delete EP.crf.  You may also want to remove references to it from your DarkInst.cfg / Install.cfg.  If you installed using the quick installation instructions, a backup of your old .cfg file was made.  Simply replace the modified DarkInst.cfg with the backup, DarkInst.cfg.epbak.</p>
+<h1>Credits</h1>
+<table class="CreditsTable">
+	<tr>
+		<th>Nameless Voice</th>
+		<td>Project leader, primary modeller / texture artist</td>
+	</tr>
+	<tr>
+		<th>Vigil</th>
+		<td>Texture artist /  modeller</td>
+	</tr>
+	<tr>
+		<th>Eshaktaar</th>
+		<td>Texture artist /  modeller, beta tester </td>
+	</tr>
+	<tr>
+		<th>Digital Nightfall</th>
+		<td>Texture artist</td>
+	</tr>
+	<tr>
+		<th>R Soul</th>
+		<td>Modeller, beta tester</td>
+	</tr>
+	<tr>
+		<th>Yandros</th>
+		<td>Texture artist /  modeller </td>
+	</tr>
+	<tr>
+		<th>Wille</th>
+		<td>Texture artist, beta tester</td>
+	</tr>
+	<tr>
+		<th>Targa</th>
+		<td>Texture artist / modeller </td>
+	</tr>
+	<tr>
+		<th>Schwaa</th>
+		<td>Modeller</td>
+	</tr>
+	<tr>
+		<th>G'len</th>
+		<td>Modeller</td>
+	</tr>
+	<tr>
+		<th>AssiDragon (aka Ravenlord)</th>
+		<td>One texture (sword blade)</td>
+	</tr>
+		<tr>
+		<th>Redface</th>
+		<td>One texture (Garrett)</td>
+	</tr>
+	<tr>
+		<th>DarkDragon</th>
+		<td>One texture (gambling table)</td>
+	</tr>
+	<tr>
+		<th>TheNightTerror</th>
+		<td>Lead tester and advisor</td>
+	</tr>
+	<tr>
+		<th>Nightwalker</th>
+		<td>Beta tester</th>
+	</tr>
+	<tr>
+		<th>Nicked</th>
+		<td>Beta tester</td>
+	</tr>
+	<tr>
+		<th>ZylonBane</th>
+		<td>Beta tester</td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1>Special thanks:</h1>
+<p>I would like to thanks the following people, for their help, advice or support throughout this project:</p>
+<p>TheNightTerror, Kolya, AssiDragon (aka Ravenlord), Spitter, TF, Ajare, ZylonBane, Digital Nightfall, Redface, Nightwalker, Wille, Nicked, Telliamed, <a href="http://lemog.fr/">Lemog Textures</a>, <a href="http://www.cgtextures.com/">CGTextures</a>, <a href="http://www.mayang.com/textures/">Mayang Textures</a>, <a href="http://images.google.com/">Google Image Search</a>.</p>
+</body>
+</html>
