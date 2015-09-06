@@ -1,0 +1,5 @@
+DML1
+
+ObjProp -3357 "RenderType" = 0
+
++ObjProp -3357 "SelfIllum" = 1.0

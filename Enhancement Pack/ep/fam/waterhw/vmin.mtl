@@ -1,0 +1,4 @@
+force_ani_settings 1
+terrain_scale 512
+ani_rate 60
+env_map 0.03 2 tex\envmaps\vurt_envmap1

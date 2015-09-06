@@ -1,0 +1,20 @@
+terrain_scale 64
+
+force_opaque
+edge_padding 0
+
+render_pass
+{
+texture tex\envmaps\diagenv
+alpha 0.75
+shaded 1
+blend SRC_ALPHA ONE
+uv_source ENVIRONMENT
+uv_mod SCALE 2 2
+}
+
+render_pass
+{
+texture $texture
+shaded
+}

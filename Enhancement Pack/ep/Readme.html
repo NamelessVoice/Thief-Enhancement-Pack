@@ -64,44 +64,32 @@ blockquote {
 	width: 192px;
 }
 
+cite
+{
+	border: 1px solid black;
+	padding: 3px;
+	display: inline-block;
+}
+
 -->
 </style>
 </head>
 <body> 
 <p align="center"><font size="+7" face="Carleton, Times New Roman, serif"><u>- Thief Enhancement Pack -</u></font><br>
-	Release 1<br>
-	Tuesday the 1st of January, 2008. </p>
+	Release 2<br>
+	Sunday the 1st of January, 2022. </p>
 <h1>What is it?</h1>
 <p>This project is an effort to improve the quality of the graphics in Thief 2: The Metal Age, and also in Thief: The Dark Project and Thief Gold.<br/>The ultimate goal is to replace all the old, low-quality objects and textures from Thief 1 and 2 with versions that have higher polygon counts and texture resolutions, while keeping as close to the originals as possible.</p>
 <h1>Installation instructions:</h1>
-<p>The <i>Enhancement Pack</i> is compatible with Thief 2: The Metal Age, Thief: The Dark Project and Thief Gold.</p>
-<p>To install the <i>Enhancement Pack</i>, you can either use the quick installation method (using the provided batch file to automatically modify any necessary files), or you can modify them manually.</br>
-<b>Using the quick installation process is recommended unless you know what you are doing.</b></p>
-<p>&nbsp;</p>
-<h2>Quick installation</h2>
-<ul>
-<li>Extract this archve (containing EP.crf and InstallEP.bat) into your Thief install folder, be in Thief 2, Thief Gold or Thief 1.</li>
-<li>Run InstallEP.bat.</li>
-</ul>
-<p><i>Note: if you are installing to Thief 1, make sure to 'optimise' your install with DarkLoader to make the game FM-ready before installing the </i>Enhancement Pack.</p>
-<p>&nbsp;</p>
-<span class="deemphasise">
-<h2>Manual installation</h2>
-<p>You can also install the <i>Enhancement Pack</i> manually.<br/>
-First, copy the EP.crf into your Thief install path.  Open DarkInst.cfg (Thief 2) or Install.cfg (Thief 1) in your favourite text editor.  (Note that Windows Notepad may break the formatting of these files, so you should use a better editor such as <a href="http://notepad-plus.sourceforge.net/uk/site.htm" alt="Notepad++">Notepad++</a>).
-Find the line <b>resname_base</b> and add one of the following to it (depending on Thief version), right after the space:</p>
-<p class="inset"><b>Thief 1:</b> .\EP\Thief1+.\EP+</br>
-<b>Thief 2:</b> .\EP+</p>
-<p>That line of the file should now read something like this (Thief 2):</p>
-<p class="inset"><kbd>resname_base <span style="color: red;">.\EP+</span>.\Res</kbd></p>
-<p>...or like this (Thief 1):</p>
-<p class="inset"><kbd>resname_base <span style="color: red;">.\EP\Thief1+.\EP+</span>.\Crfs</kbd></p>
-</p>
-<p>Finally, if you are installing to Thief 1, open Dark.cfg and make sure that both the lines <b>ObjTextures16</b> and <b>MeshTextures16</b> are somewhere in that file, on a line of their own.  Also make sure that there is one empty line at the end of the file.
+<p>The <i>Enhancement Pack</i> requires NewDark 1.21 or higher, and is compatible with Thief 2: The Metal Age, Thief: The Dark Project and Thief Gold.</p>
+<p>To install the <i>Enhancement Pack</i>, simply drop ep2.crf into your Thief installation directory, and add it to the mod_path in cam_mod.ini</br>
+<p>For Thief 2, this should look like this: <cite>mod_path ep2</cite></p>
+<p>For Thief 1, you should instead use: <cite>mod_path ep2\thief1+ep2</cite></p>
+<p>If you are installing to Thief 1, open Dark.cfg and make sure that both the lines <b>ObjTextures16</b> and <b>MeshTextures16</b> are somewhere in that file, on a line of their own.  Also make sure that there is one empty line at the end of the file.
 </span>
 <p>&nbsp;</p>
 <h2>Uninstallation</h2>
-<p>To uninstall the <i>Enhancement Pack</i>, simply delete EP.crf.  You may also want to remove references to it from your DarkInst.cfg / Install.cfg.  If you installed using the quick installation instructions, a backup of your old .cfg file was made.  Simply replace the modified DarkInst.cfg with the backup, DarkInst.cfg.epbak.</p>
+<p>To uninstall the <i>Enhancement Pack</i>, simply delete ep2.crf.  You may also want to remove references to it from your cam_mod.ini.</p>
 <h1>Credits</h1>
 <table class="CreditsTable">
 	<tr>
@@ -109,12 +97,36 @@ Find the line <b>resname_base</b> and add one of the following to it (depending 
 		<td>Project leader, primary modeller / texture artist</td>
 	</tr>
 	<tr>
+		<th>NecroBob</th>
+		<td>Texture artist - terrain textures</td>
+	</tr>
+	<tr>
+		<th>C-BEAM</th>
+		<td>Texture artist - terrain textures</td>
+	</tr>
+	<tr>
+		<th>LarryG</th>
+		<td>Texture artist - terrain textures</td>
+	</tr>
+	<tr>
+		<th>Purgator</th>
+		<td>Texture artist, beta tester</td>
+	</tr>
+	<tr>
+		<th>Renzatic</th>
+		<td>Texture artist - terrain textures</td>
+	</tr>
+	<tr>
+		<th>Wille</th>
+		<td>Texture artist - terrain textures</td>
+	</tr>
+	<tr>
 		<th>Vigil</th>
-		<td>Texture artist /  modeller</td>
+		<td>Texture artist / modeller</td>
 	</tr>
 	<tr>
 		<th>Eshaktaar</th>
-		<td>Texture artist /  modeller, beta tester </td>
+		<td>Texture artist / modeller, beta tester </td>
 	</tr>
 	<tr>
 		<th>Digital Nightfall</th>
@@ -126,7 +138,7 @@ Find the line <b>resname_base</b> and add one of the following to it (depending 
 	</tr>
 	<tr>
 		<th>Yandros</th>
-		<td>Texture artist /  modeller </td>
+		<td>Texture artist / modeller </td>
 	</tr>
 	<tr>
 		<th>Wille</th>
@@ -145,7 +157,7 @@ Find the line <b>resname_base</b> and add one of the following to it (depending 
 		<td>Modeller</td>
 	</tr>
 	<tr>
-		<th>AssiDragon (aka Ravenlord)</th>
+		<th>Assassin Ravenlord</th>
 		<td>One texture (sword blade)</td>
 	</tr>
 		<tr>
@@ -177,6 +189,6 @@ Find the line <b>resname_base</b> and add one of the following to it (depending 
 <p>&nbsp;</p>
 <h1>Special thanks:</h1>
 <p>I would like to thanks the following people, for their help, advice or support throughout this project:</p>
-<p>TheNightTerror, Kolya, AssiDragon (aka Ravenlord), Spitter, TF, Ajare, ZylonBane, Digital Nightfall, Redface, Nightwalker, Wille, Nicked, Telliamed, <a href="http://lemog.fr/">Lemog Textures</a>, <a href="http://www.cgtextures.com/">CGTextures</a>, <a href="http://www.mayang.com/textures/">Mayang Textures</a>, <a href="http://images.google.com/">Google Image Search</a>.</p>
+<p>TheNightTerror, Kolya, Assassin Ravenlord, Spitter, TF, Ajare, ZylonBane, Digital Nightfall, Redface, Nightwalker, Wille, Nicked, Telliamed, <a href="http://lemog.fr/">Lemog Textures</a>, <a href="http://www.textures.com/">Textures.com</a>, <a href="http://www.mayang.com/textures/">Mayang Textures</a>, <a href="http://images.google.com/">Google Image Search</a>.</p>
 </body>
 </html>
