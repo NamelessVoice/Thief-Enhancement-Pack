@@ -3,3 +3,15 @@ DML1
 ObjProp -3357 "RenderType" = 0
 
 +ObjProp -3357 "SelfIllum" = 1.0
+
++ObjProp "Sword" "InvRendType" {
+	Type 1
+	"Resource" "sword_inv"
+}
+
++ObjProp "ConstantineSword" "InvLimbModel" = "armcn2"
+
++ObjProp "ConstantineSword" "InvRendType" {
+	Type 1
+	"Resource" "swordcon"
+}
