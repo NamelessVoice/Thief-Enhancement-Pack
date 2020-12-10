@@ -1,0 +1,3 @@
+# Different scale than in T2
+terrain_scale 64 64
+tile_factor 4

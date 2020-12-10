@@ -1,0 +1,36 @@
+terrain_scale 64 64
+
+force_opaque
+
+
+
+# ------1------
+render_pass
+{
+texture tex\envmaps\window3
+alpha 0.49
+shaded 1
+blend SRC_ALPHA
+uv_source ENVIRONMENT
+uv_mod SCALE 2 2
+}
+
+
+# ------2------
+render_pass
+{
+texture tex\envmaps\window2
+alpha 0.22
+shaded 1
+#blend SRC_ALPHA
+uv_source ENVIRONMENT
+uv_mod SCALE 2 2
+}
+
+
+# ------3------
+render_pass
+{
+texture $texture
+shaded 1
+}

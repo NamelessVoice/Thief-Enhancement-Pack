@@ -1,1 +1,24 @@
-terrain_scale 64 64
+terrain_scale 64
+tile_factor 4
+force_opaque
+
+# ------1------
+render_pass
+{
+texture tex\envmaps\metal2
+alpha 0.14
+shaded 0
+blend DST_COLOR
+uv_source ENVIRONMENT
+uv_mod SCALE 1.5 1.5
+uv_mod OFFSET 1 1
+}
+
+
+# ------2------
+render_pass
+{
+texture $texture
+shaded
+}
+

@@ -1,0 +1,14 @@
+terrain_scale 128 128
+
+
+# ------3------
+render_pass
+{
+texture tex\envmaps\ICE
+alpha 0.8
+shaded 0
+blend DST_COLOR
+#blend SRC_ALPHA
+uv_source ENVIRONMENT
+uv_mod SCALE 1 1
+}

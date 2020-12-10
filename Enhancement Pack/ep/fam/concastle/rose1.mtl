@@ -1,1 +1,42 @@
 terrain_scale 256
+
+force_opaque
+
+# CODE FOR REFLECTIVE GLASS WINDOWS AND UNREFLECTIVE OUTLINES IN THIEF 2 by JackInTheBox
+#Code consists of several layers of render pass that the game renders one after another on top of each other
+#Force opaque, so the transparent areas are drawn under the reflections
+#The reflection maps use the transparent areas in the the image file itself.
+#Render pass 1: Reflection
+#Render pass 2: Reflection / illumination variation. It is also to "rescue" the darkening that occurs in the pass 1.
+#Play with alpha (Range 0 - 1) in 2 and 3 to fine tune reflection.
+
+
+# ------1------
+render_pass
+{
+texture tex\envmaps\window3
+alpha 0.3
+shaded 1
+blend SRC_ALPHA
+uv_source PROJECTION
+uv_mod SCALE 4 4
+}
+
+
+# ------2------
+render_pass
+{
+texture tex\envmaps\window2
+alpha 0.3
+shaded 1
+blend DST_COLOR
+uv_source PROJECTION
+uv_mod SCALE 2 2
+}
+
+# ------3------
+render_pass
+{
+texture $texture
+shaded
+}

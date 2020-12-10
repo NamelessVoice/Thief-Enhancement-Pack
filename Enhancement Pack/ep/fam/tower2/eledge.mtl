@@ -1,0 +1,11 @@
+terrain_scale 64 64
+
+render_pass
+{
+texture tex\envmaps\metal
+alpha 0.35
+shaded 1
+blend SRC_ALPHA ONE
+uv_source ENVIRONMENT
+uv_mod SCALE 2 2
+}

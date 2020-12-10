@@ -1,2 +1,35 @@
 terrain_scale 64 128
-include darkwindow.mtl
+
+force_opaque
+
+
+
+# ------1------
+render_pass
+{
+texture tex\envmaps\window3
+alpha 0.41
+shaded 1
+blend SRC_ALPHA
+uv_source ENVIRONMENT
+uv_mod SCALE 2.7 2.7
+}
+
+
+# ------2------
+render_pass
+{
+texture tex\envmaps\window2
+alpha 0.25
+shaded 1
+blend DST_COLOR
+uv_source ENVIRONMENT
+uv_mod SCALE 2 2
+}
+
+# ------3------
+render_pass
+{
+texture $texture
+shaded
+}

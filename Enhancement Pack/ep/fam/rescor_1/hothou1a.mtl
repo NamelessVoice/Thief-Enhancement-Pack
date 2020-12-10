@@ -1,1 +1,25 @@
 terrain_scale 128
+
+force_opaque
+
+
+
+# ------1------
+render_pass
+{
+texture tex\envmaps\window2
+alpha 0.8
+shaded 0
+blend DST_COLOR
+#blend SRC_ALPHA
+uv_source ENVIRONMENT
+uv_mod SCALE 1 1
+}
+
+
+# ------2------
+render_pass
+{
+texture $texture
+shaded 1
+}

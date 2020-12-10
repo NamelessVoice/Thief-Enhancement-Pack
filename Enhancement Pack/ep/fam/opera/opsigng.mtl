@@ -1,0 +1,20 @@
+terrain_scale 256 64
+
+force_opaque
+edge_padding 0
+
+render_pass
+{
+texture tex/envmaps/GoldEnv
+alpha 0.5
+shaded 0
+blend SRC_ALPHA ONE
+uv_source ENVIRONMENT
+uv_mod SCALE 1 1
+}
+
+render_pass
+{
+texture $texture
+shaded
+}

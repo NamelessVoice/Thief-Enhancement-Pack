@@ -1,0 +1,16 @@
+terrain_scale 64
+
+
+# ------3------
+render_pass
+{
+texture tex\envmaps\metal3
+alpha 0.39
+shaded 0
+blend DST_COLOR
+#blend SRC_ALPHA
+uv_source ENVIRONMENT
+uv_mod SCALE 2 2
+uv_mod OFFSET 1 1
+
+}

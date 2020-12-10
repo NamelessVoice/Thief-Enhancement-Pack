@@ -1,2 +1,23 @@
 terrain_scale 128 64
 tile_factor 1 2
+force_opaque
+
+
+# ------1------
+render_pass
+{
+texture tex\envmaps\metaldetailbright
+alpha 0.8
+shaded 0
+blend DST_COLOR
+uv_source ENVIRONMENT
+uv_mod SCALE 2.6 2.6
+}
+
+
+# ------3------
+render_pass
+{
+texture $texture
+shaded 1
+}

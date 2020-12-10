@@ -1,1 +1,13 @@
 terrain_scale 32 32
+
+# ------1------
+render_pass
+{
+texture tex\envmaps\floor
+alpha 0.55
+shaded 0
+blend DST_COLOR
+uv_source PROJECTION
+uv_mod SCALE 1 1
+uv_mod OFFSET 3 3
+}

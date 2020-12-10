@@ -1,1 +1,15 @@
 terrain_scale 64 64
+
+
+# ------1------
+render_pass
+{
+texture tex\envmaps\metal
+alpha 0.5
+shaded 0
+blend DST_COLOR
+uv_source projection
+uv_mod SCALE 0.88 0.88
+uv_mod OFFSET 1 1
+
+}

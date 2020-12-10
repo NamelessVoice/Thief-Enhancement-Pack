@@ -1,0 +1,37 @@
+terrain_scale 64 64
+
+ani_rate 0
+render_material_only 1
+
+
+# ------1------
+render_pass
+{
+texture $texture
+alpha 1
+blend SRC_ALPHA
+shaded 1
+}
+
+# ------3------
+render_pass
+{
+texture tex\envmaps\metaldetailbright
+alpha 0.31
+shaded 0
+blend DST_COLOR
+#blend SRC_ALPHA
+uv_source ENVIRONMENT
+uv_mod SCALE 1.5 1.5
+
+}
+
+
+
+# ------4------
+render_pass
+{
+texture tex\metallic\r23
+force_opaque 0
+shaded 1
+}

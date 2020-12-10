@@ -1,2 +1,19 @@
 terrain_scale 64
 tile_factor 4
+
+
+
+
+# ------1------
+render_pass
+{
+texture tex\envmaps\metal2
+alpha 0.49
+shaded 1
+blend DST_COLOR
+#blend SRC_ALPHA
+uv_source ENVIRONMENT
+uv_mod SCALE 0.95 0.95
+uv_mod OFFSET 1 1
+
+}
