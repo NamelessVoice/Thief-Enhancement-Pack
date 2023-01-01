@@ -10,7 +10,7 @@ render_pass
 texture tex\envmaps\metal3
 alpha 0.5
 shaded 0
-blend DST_COLOR
+blend DST_COLOR INV_DST_COLOR
 uv_source ENVIRONMENT
 uv_mod SCALE 2.05 2.05
 }

@@ -7,7 +7,7 @@ render_pass
 texture tex\envmaps\metal5
 alpha 0.4
 shaded 0
-blend DST_COLOR
+blend DST_COLOR INV_DST_COLOR
 uv_source environment
 uv_mod SCALE 0.8 0.8
 uv_mod OFFSET 0 2

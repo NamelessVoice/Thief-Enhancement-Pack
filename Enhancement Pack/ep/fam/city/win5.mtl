@@ -10,8 +10,7 @@ render_pass
 texture tex\envmaps\window3
 alpha 0.16
 shaded 1
-#blend DST_COLOR
-blend SRC_ALPHA
+blend SRC_ALPHA ONE
 uv_source ENVIRONMENT
 uv_mod SCALE 3 3
 }
@@ -23,8 +22,7 @@ render_pass
 texture tex\envmaps\window2
 alpha 0.08
 shaded 1
-blend DST_COLOR
-#blend SRC_ALPHA
+blend DST_COLOR INV_DST_COLOR
 uv_source ENVIRONMENT
 uv_mod SCALE 2 2
 }
@@ -36,8 +34,7 @@ render_pass
 texture tex\envmaps\window2
 alpha 0.25
 shaded 1
-blend DST_COLOR
-#blend SRC_ALPHA
+blend DST_COLOR INV_DST_COLOR
 uv_source ENVIRONMENT
 uv_mod SCALE 2 2
 }
@@ -49,8 +46,7 @@ render_pass
 texture tex\envmaps\window2
 alpha 0.35
 shaded 0
-blend DST_COLOR
-#blend SRC_ALPHA
+blend DST_COLOR INV_DST_COLOR
 uv_source PROJECTION
 uv_mod SCALE 2 2
 }

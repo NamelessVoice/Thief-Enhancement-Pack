@@ -6,7 +6,7 @@ render_pass
 {
 texture $texture
 alpha 1
-blend SRC_ALPHA
+blend SRC_ALPHA ONE
 shaded 1
 }
 
@@ -16,8 +16,7 @@ render_pass
 texture tex\envmaps\metaldetailbright
 alpha 0.6
 shaded 0
-blend DST_COLOR
-#blend SRC_ALPHA
+blend DST_COLOR INV_DST_COLOR
 uv_source ENVIRONMENT
 uv_mod SCALE 1.5 1.5
 

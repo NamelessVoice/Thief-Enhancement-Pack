@@ -8,7 +8,7 @@ render_pass
 texture tex\envmaps\marble
 alpha 0.2
 shaded 0
-blend DST_COLOR
+blend DST_COLOR INV_DST_COLOR
 uv_source ENVIRONMENT
 uv_mod SCALE 3 3
 uv_mod OFFSET 1 1

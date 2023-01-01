@@ -9,7 +9,7 @@ render_pass
 texture tex\envmaps\metaldetailbright
 alpha 0.8
 shaded 0
-blend DST_COLOR
+blend DST_COLOR INV_DST_COLOR
 uv_source ENVIRONMENT
 uv_mod SCALE 2.6 2.6
 }
