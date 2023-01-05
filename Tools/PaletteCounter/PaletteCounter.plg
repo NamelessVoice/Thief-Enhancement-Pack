@@ -1,0 +1,32 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: PaletteCounter - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x1809 /fo"Release/PaletteCounter.res" /d "NDEBUG" /d "_AFXDLL" "C:\Desktop\Projects\C++\PaletteCounter\PaletteCounter.rc"" 
+Creating temporary file "C:\DOCUME~1\NAMELE~1\LOCALS~1\Temp\RSP11C2.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/PaletteCounter.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Desktop\Projects\C++\PaletteCounter\PaletteCounter.cpp"
+"C:\Desktop\Projects\C++\PaletteCounter\PaletteCounterDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\NAMELE~1\LOCALS~1\Temp\RSP11C2.tmp" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:no /pdb:"Release/PaletteCounter.pdb" /machine:I386 /out:"Release/PaletteCounter.exe"  ".\Release\PaletteCounter.obj" ".\Release\PaletteCounterDlg.obj" ".\Release\StdAfx.obj" ".\Release\PaletteCounter.res" "
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+PaletteCounter.cpp
+PaletteCounterDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+PaletteCounter.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
