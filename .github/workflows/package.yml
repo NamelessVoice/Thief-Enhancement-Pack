@@ -1,0 +1,23 @@
+name: Package
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: ep2.zip
+        path: |
+          D:\a\Thief-Enhancement-Pack\Thief-Enhancement-Pack\Enhancement Pack\ep\*
