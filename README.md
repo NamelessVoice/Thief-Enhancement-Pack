@@ -10,7 +10,7 @@ The ultimate goal is to replace all the old, low-quality objects and textures fr
 
 
 ## Installation
-There is no installer, just the ep2.crf file. Drop it into your Thief installation and add it to the mod_path in cam_mod.ini
+There is no installer, just the ep2.zip file. Drop it into your Thief installation and add it to the mod_path in cam_mod.ini
 
 e.g.:
 
