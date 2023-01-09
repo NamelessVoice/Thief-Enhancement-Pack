@@ -1,1 +1,1 @@
-7z.exe a ep2.crf .\ep\* -tzip -mx5
+7z.exe a ep2.zip .\ep\* -tzip -mx5
