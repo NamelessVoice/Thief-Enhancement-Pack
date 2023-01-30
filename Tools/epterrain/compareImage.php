@@ -157,24 +157,50 @@ foreach ($DIR_NAMES as $dkey => $dvalue)
 	}
 }
 
-if ( isset($url) )
+$pending = array();
+
+if ( $texName )
 {
-	$newImage = $url;
-} else {
-	if ( $texName )
-	{
-		$newImages = array();
-		$newImages = array_merge($newImages, glob($newDir . $famName . '/' . $texName . ".png"));
-		$newImages = array_merge($newImages, glob($newDir . $famName . '/' . $texName . ".jpg"));
-		$newImages = array_merge($newImages, glob($newDir . $famName . '/' . $texName . ".gif"));
-		if ( isset($newImages[0]) ) {
-			$newImage = $newImages[0];
-		}
+	$newImages = array();
+	$newImages = array_merge($newImages, glob($newDir . $famName . '/' . $texName . ".png"));
+	$newImages = array_merge($newImages, glob($newDir . $famName . '/' . $texName . ".jpg"));
+	$newImages = array_merge($newImages, glob($newDir . $famName . '/' . $texName . ".gif"));
+	if ( isset($newImages[0]) ) {
+		$newImage = $newImages[0];
+		$displayImage = $newImage;
 	}
 }
 
 if ( !isset($newImage) ) {
-	$newImage = $oldImage;
+	$displayImage = $oldImage;
+}
+
+if ( isset($url) )
+{
+	$displayImage = $url;
+	array_push($pending, "Provided URL");
+	array_push($pending, $url);
+}
+
+$pendingSets = glob($pendingDir . '*', GLOB_ONLYDIR);
+
+foreach ($pendingSets as $pendingSet)
+{
+	$setName = basename($pendingSet);
+	$setImages = array();
+	$setImages = array_merge($setImages, glob($pendingSet . '/' . $famName . '/' . $texName . ".png"));
+	$setImages = array_merge($setImages, glob($pendingSet . '/' . $famName . '/' . $texName . ".jpg"));
+	$setImages = array_merge($setImages, glob($pendingSet . '/' . $famName . '/' . $texName . ".gif"));
+	if ( isset($setImages[0]) ) {
+		array_push($pending, $setName);
+		array_push($pending, $setImages[0]);
+		
+		if (isset($_GET['variant']) && $setName == $_GET['variant'])
+		{
+			$displayImage = $setImages[0];
+		}
+		
+	}
 }
 
 print("<p>Family: " . $famName . "</p>");
@@ -209,7 +235,7 @@ if ( isset($scale_width) )
 	$bgSize = '100%';
 }
 
-print("<table style=\"margin-left: auto; margin-right: auto;\"><tr><td style=\"background-image:url(" . $oldImage . ");background-size: $bgSize\" id=\"compareView\"><img id=\"newImage\" src=\"" . $newImage . "\" alt=\"$texName\" /></td></tr></table>");
+print("<table style=\"margin-left: auto; margin-right: auto;\"><tr><td style=\"background-image:url(" . $oldImage . ");background-size: $bgSize\" id=\"compareView\"><img id=\"newImage\" src=\"" . $displayImage . "\" alt=\"$texName\" /></td></tr></table>");
 
 print("<p><a href=\"javascript:toggleFade()\">Toggle fading</a></p>");
 
@@ -228,29 +254,12 @@ print("></input>");
 print("<input type=\"submit\" value=\"Compare\" />");
 print("</p></form>");
 
-
-$pendingSets = glob($pendingDir . '*', GLOB_ONLYDIR);
-
-$pending = array();
-foreach ($pendingSets as $pendingSet)
-{
-	$setName = basename($pendingSet);
-	$setImages = array();
-	$setImages = array_merge($setImages, glob($pendingSet . '/' . $famName . '/' . $texName . ".png"));
-	$setImages = array_merge($setImages, glob($pendingSet . '/' . $famName . '/' . $texName . ".jpg"));
-	$setImages = array_merge($setImages, glob($pendingSet . '/' . $famName . '/' . $texName . ".gif"));
-	if ( isset($setImages[0]) ) {
-		array_push($pending, $setName);
-		array_push($pending, $setImages[0]);
-	}
-}
-
 if (count($pending) > 0)
 {
 	print('<div id="variants">');
 	print("<p>Variants:</p>");
 	print("<ul>");
-	if ($newImage != $oldImage)
+	if (isset($newImage))
 	{
 		print("<li><a href=\"javascript:setNewImage('$newImage')\">EP2</a></li>");
 	} else {
