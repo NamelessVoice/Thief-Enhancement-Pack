@@ -10,16 +10,17 @@ The ultimate goal is to replace all the old, low-quality objects and textures fr
 
 
 ## Installation
-There is no installer, just the ep2.zip file. Drop it into your Thief installation and add it to the mod_path in cam_mod.ini
+There is no installer, just the ep2.zip file. Drop it into your Thief installation's "mods" folder and add it to the mod_path in cam_mod.ini
 
 e.g.:
 
-    mod_path ep2
+    mod_path mods\ep2
 
 For Thief 1, instead use:
 
-    mod_path ep2\thief1+ep2
+    mod_path mods\ep2\thief1+mods\ep2
 
+There is no need to extract the zip, though you can if you prefer.  It will work as either mods\ep2.zip or as mods\ep2 (extracted folder.)
 
 
 ## Things to look out for:
@@ -48,7 +49,7 @@ This package has been assembled from  the hard work of a number of contributors:
 | Wille              | Texture artist - terrain textures                 |
 | Vigil              | Texture artist / modeller                         |
 | Eshaktaar          | Texture artist / modeller, beta tester            |
-| Dana Nightinggale  | Texture artist                                    |
+| Dana Nightingale   | Texture artist                                    |
 | R Soul             | Modeller, beta tester                             |
 | Yandros            | Texture artist / modeller                         |
 | Wille              | Texture artist, beta tester                       |
