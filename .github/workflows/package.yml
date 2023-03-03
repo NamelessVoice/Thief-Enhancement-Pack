@@ -28,7 +28,7 @@ jobs:
     - name: Generate release tag
       id: tag
       run: |
-        echo "::set-output name=release_tag::$(date +"%Y-%m-%d)"
+        echo "::set-output name=release_tag::$(date +"%Y-%m-%d")"
     - name: Create release
       uses: softprops/action-gh-release@v1
       with:
