@@ -23,9 +23,7 @@ jobs:
 #        path: |
 #          D:\a\Thief-Enhancement-Pack\Thief-Enhancement-Pack\Enhancement Pack\ep\*
     - name: Archive Release
-      uses: edgarrc/action-7z@v1
-      with:
-        args: 7z a -tzip -mx=9 ep2.zip  "D:\\a\\Thief-Enhancement-Pack\\Thief-Enhancement-Pack\\Enhancement Pack\\ep\\books\\"
+      run: 7z a -tzip -mx=9 ep2.zip "D:\\a\\Thief-Enhancement-Pack\\Thief-Enhancement-Pack\\Enhancement Pack\\ep\\books\\"
 #      uses: thedoctor0/zip-release@0.7.1
 #      with:
 #        type: 'zip'
