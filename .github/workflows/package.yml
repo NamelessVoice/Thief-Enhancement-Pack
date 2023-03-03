@@ -7,17 +7,31 @@ on:
     branches: [ "master" ]
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
     runs-on: windows-latest
     
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout source
+      uses: actions/checkout@v3
 
-    - uses: actions/upload-artifact@v3
+#    - uses: actions/upload-artifact@v3
+#      with:
+#        name: ep2
+#        path: |
+#          D:\a\Thief-Enhancement-Pack\Thief-Enhancement-Pack\Enhancement Pack\ep\*
+    - name: Archive Release
+      run: 7z a -tzip -mx=9 ep2.zip "D:\\a\\Thief-Enhancement-Pack\\Thief-Enhancement-Pack\\Enhancement Pack\\ep\\"
+    - name: Generate release tag
+      id: tag
+      run: |
+        echo "::set-output name=release_tag::$(date +"%Y-%m-%d")"
+    - name: Create release
+      uses: softprops/action-gh-release@v1
       with:
-        name: ep2
-        path: |
-          D:\a\Thief-Enhancement-Pack\Thief-Enhancement-Pack\Enhancement Pack\ep\*
+        Name: ${{ steps.tag.outputs.release_tag }}
+        tag_name: ${{ steps.tag.outputs.release_tag }}
+        body: Automatic build on ${{ steps.tag.outputs.release_tag }}
+        files: ep2.zip
