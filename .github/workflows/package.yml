@@ -1,0 +1,36 @@
+name: Package
+
+on: push
+#on:
+#  push:
+#    branches: [ "master" ]
+#  pull_request:
+#    branches: [ "master" ]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+
+#    - uses: actions/upload-artifact@v3
+#      with:
+#        name: ep2
+#        path: |
+#          D:\a\Thief-Enhancement-Pack\Thief-Enhancement-Pack\Enhancement Pack\ep\*
+    - name: Archive Release
+      uses: thedoctor0/zip-release@0.7.1
+      with:
+        type: 'zip'
+        filename: 'ep2.zip'
+        path: 'D:\a\Thief-Enhancement-Pack\Thief-Enhancement-Pack\Enhancement Pack\ep\books\'
+    - uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        Name: Release ${{ github.event.repository.updated_at}}
+        body: Latest
+        files: ep2.zip
