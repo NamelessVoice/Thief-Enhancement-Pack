@@ -29,10 +29,15 @@ jobs:
 #        type: 'zip'
 #        filename: 'ep2.zip'
 #        path: "D:\\a\\Thief-Enhancement-Pack\\Thief-Enhancement-Pack\\Enhancement Pack\\ep\\books\\"
+    - name: Generate release tag
+      id: tag
+      run: |
+        echo "::set-output name=release_tag::Release_$(date +"%Y.%m.%d_%H-%M")"
     - name: Create release
       uses: softprops/action-gh-release@v1
 #      if: startsWith(github.ref, 'refs/tags/')
       with:
         Name: Release ${{ github.event.repository.updated_at}}
+        tag_name: ${{ steps.tag.outputs.release_tag }}
         body: Latest
         files: ep2.zip
