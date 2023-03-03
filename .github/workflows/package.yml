@@ -29,8 +29,8 @@ jobs:
 #      uses: thedoctor0/zip-release@0.7.1
 #      with:
 #        type: 'zip'
-        filename: 'ep2.zip'
-        path: "D:\\a\\Thief-Enhancement-Pack\\Thief-Enhancement-Pack\\Enhancement Pack\\ep\\books\\"
+#        filename: 'ep2.zip'
+#        path: "D:\\a\\Thief-Enhancement-Pack\\Thief-Enhancement-Pack\\Enhancement Pack\\ep\\books\\"
     - uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
