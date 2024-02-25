@@ -1,0 +1,30 @@
+DML1
+
+//lets make sure the OM dmls are loaded only for OMS, and nothing else
+FINGERPRINT
+{
+   QVAR "origmis" == 1
+}
+FINGERPRINT
+{
+   503 [28.603 -77.8486 -29.2381]
+   547 [-14.5621 -60.0677 -28.0701]
+   527 [32.0891 -34.6563 -28.0059]
+   529 [-0.389799 -26.4077 -30.4018]
+   510 [-14.0515 -0.399375 -30.1673]
+   1204 [-43.8034 -13.8418 -57.3396]
+   1207 [-44.7494 -0.173386 -44.402]
+   445 [-59.02 -0.0620282 -30.6519]
+}
+//use hires quiver
+-ObjProp 1389 "PhysType"
++ObjProp 1389 "Scale" = 0.75, 0.75, 0.75
+ObjProp 1389 "ModelName"
+{
+	"" quiver_train
+}
+ObjProp 1389 "Position"
+{
+	"Location" -42.48, -3.8, -34.8
+	"Pitch" 6aaa
+}

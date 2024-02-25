@@ -15,3 +15,24 @@ ObjProp -3357 "RenderType" = 0
 	Type 1
 	"Resource" "swordcon"
 }
+
+ObjProp "SwingingBell" "StTweqJoints" {
+	Joint1AnimS On
+	Joint2AnimS On, Reverse
+}
+
+ObjProp "SwingingBell" "CfgTweqJoints" {
+	"    rate-low-high" 0.48, -6, 6
+	Joint2AnimC Sim
+	"    rate-low-high2" 0.96, -24, 24
+}
+
++ObjProp "SwingingBell" "JointPos" {
+	"Joint 1" -6.0
+	"Joint 2" 24.0
+}
+
+ObjProp "M11BellChurch" "SchLoopParams" {
+	"Interval Min" 5000
+	"Interval Max" 5000
+}
