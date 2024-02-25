@@ -1,0 +1,25 @@
+DML1
+
+//lets make sure the OM dmls are loaded only for OMS, and nothing else
+FINGERPRINT
+{
+   QVAR "origmis" == 1
+}
+FINGERPRINT
+{
+   975 [316.761 94.0262 90.9141]
+   976 [316.167 85.6588 86.3791]
+   990 [270.942 79.2168 80.7146]
+   977 [292.084 84.0661 67.8968]
+   991 [281.015 79.2405 62.8312]
+   1657 [256.803 77.1591 79.2392]
+   1677 [291.808 98.9231 50.7878]
+   1500 [254.58 42.8944 75.3752]
+}
+//tiara needs to be repositioned
+ObjProp 783 "Position"
+{
+	"Location" -0.1, -104.72, 70.95
+	"Heading" 1c00
+}
++ObjProp 783 "Scale" = 1, 1.15, 1

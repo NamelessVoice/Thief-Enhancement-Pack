@@ -1,0 +1,43 @@
+DML1
+
+//lets make sure the OM dmls are loaded only for OMS, and nothing else
+FINGERPRINT
+{
+   QVAR "origmis" == 1
+}
+FINGERPRINT
+{
+   225 [40.6953 -15.9955 17]
+   226 [32.7545 -15.853 17]
+   227 [28.0823 -8.67105 17]
+   228 [23.326 -11.2989 17]
+   229 [14.8188 -5.28168 17]
+   232 [14.4177 5.08149 17]
+   233 [18.2737 9.29479 17]
+   234 [14.2029 25.6905 17]
+}
+//use hires bow and quiver
+ObjProp 92 "ModelName"
+{
+	"" quiver_train
+}
++ObjProp 92 "Scale" = 0.75, 0.75, 0.75
+ObjProp 92 "Position"
+{
+	"Location" -121, 197.7, 10.8
+	"Heading" 2e38
+	"Pitch" 1000
+	"Bank" 4000
+}
+ObjProp 93 "ModelName"
+{
+	"" bow2_train
+}
+ObjProp 93 "Position"
+{
+	"Location" -121.533, 197.186, 10.67
+}
++ObjProp 40 "ModelName"
+{
+	"" sword_train
+}

@@ -1,0 +1,20 @@
+DML1
+
+//lets make sure the OM dmls are loaded only for OMS, and nothing else
+FINGERPRINT
+{
+   QVAR "origmis" == 1
+}
+FINGERPRINT
+{
+   133 [139.228 -227.605 -20.6028]
+   130 [61.9712 -197.083 -24.7442]
+   257 [112 -200 -19]
+   255 [117 -200 -17]
+   256 [123 -200 -17]
+   131 [91.402 -144.406 -24.7442]
+   132 [130.503 -146.213 -24.7442]
+   134 [151.696 -129.525 -11.7723]
+}
+
+// Nothing to do

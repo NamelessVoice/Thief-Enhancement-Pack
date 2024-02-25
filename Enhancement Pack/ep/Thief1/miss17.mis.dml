@@ -1,0 +1,55 @@
+DML1
+
+//lets make sure the OM dmls are loaded only for OMS, and nothing else
+FINGERPRINT
+{
+   QVAR "origmis" == 1
+}
+FINGERPRINT
+{
+   1550 [-391.879 -448.412 90.9637]
+   1546 [-392.37 -392.573 86.7025]
+   1577 [-390.075 -428.263 84.2896]
+   1576 [-390.215 -362.321 74.381]
+   1548 [-406.052 -433.244 87.5224]
+   1549 [-404.195 -431.034 75.988]
+   1547 [-420.609 -425.211 98.2882]
+   1234 [-413.993 -406.294 76.1164]
+}
+//tiara needs to be repositioned
+ObjProp 72 "Position"
+{
+	"Location" -0.109, -94.64, 22.685
+}
++ObjProp 72 "Scale" = 0.845, 0.85, 0.9
+//fixing the pipes
+-ObjProp 1493 "PhysType"
+ObjProp 1493 "Position"
+{
+	"Location" -459.258, -380.974, 54.9723
+}
++ObjProp 1493 "PhysType"
+{
+	"Type" OBB
+	"# Submodels" 6
+}
+-ObjProp 1491 "PhysType"
+ObjProp 1491 "Position"
+{
+	"Location" -459.253, -378.736, 47
+}
++ObjProp 1491 "PhysType"
+{
+	"Type" OBB
+	"# Submodels" 6
+}
+-ObjProp 897 "PhysType"
+ObjProp 897 "Position"
+{
+	"Location" -459.253, -378.738, 41
+}
++ObjProp 897 "PhysType"
+{
+	"Type" OBB
+	"# Submodels" 6
+}
