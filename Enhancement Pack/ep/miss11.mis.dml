@@ -1,0 +1,28 @@
+DML1
+
+FINGERPRINT
+{
+   QVAR "T2origmis" == 1
+}
+FINGERPRINT
+{
+   296 [-194 179 4]
+   779 [-483 156 -33]
+   1444 [-454 206 86]
+   1766 [-154 116 -27]
+   1424 [-320 103 84]
+   808 [-424 186 30]
+   265 [-518 145 -32]
+   1588 [-446 191 31]
+   QVAR "goal_target_0" == 356
+}
+
+ObjProp 107 "StTweqJoints" {
+	Joint1AnimS On
+	Joint2AnimS On, Reverse
+}
+
++ObjProp 107 "JointPos" {
+	"Joint 1" -6.0
+	"Joint 2" 24.0
+}
