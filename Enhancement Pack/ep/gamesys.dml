@@ -1,5 +1,12 @@
 DML1
 
+//only load for T2, not for T2x
+FINGERPRINT
+{
+   NAME -5333 MechCherub  
+   !NAME -8523 Malak  
+}
+
 ObjProp -3357 "RenderType" = 0
 
 +ObjProp -3357 "SelfIllum" = 1.0
