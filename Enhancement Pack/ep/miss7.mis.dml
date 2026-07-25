@@ -1,0 +1,11 @@
+DML1
+
+FINGERPRINT
+{
+   QVAR "origmis" == 1
+}
+// CoinSwitcher needs a slightly different position because of the EP bowl model
+ObjProp "CoinSwitcher" "Position"
+{
+	"Location" 105.1, -188.13, -33.95
+}
