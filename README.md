@@ -12,13 +12,27 @@ The ultimate goal is to replace all the old, low-quality objects and textures fr
 ## Installation
 There is no installer, just the ep2.zip file. Drop it into your Thief installation's "mods" folder and add it to the mod_path in cam_mod.ini
 
-e.g.:
+To do this, open the cam_mod.ini in a text editor, and find a line starting with `mod_path`.
+If one does not exist, add it to the bottom.
+
+For Thief 2, add:
+
+    mods\ep2
+
+For Thief 1, instead add:
+
+    mods\ep2\thief1+mods\ep2
+
+If there is already a mod path specified (such as if you are using TFix or the GOG version), then add a + symbol to the end of the line, and then append the EP path(s) after that.
+
+Examples:
+Thief 2, EP2 as the only mod:
 
     mod_path mods\ep2
 
-For Thief 1, instead use:
+Thief Gold, GOG version, with default pre-installed mods:
 
-    mod_path mods\ep2\thief1+mods\ep2
+    mod_path .\mods\gamepad+.\FMdml+.\mods\EP2
 
 There is no need to extract the zip, though you can if you prefer.  It will work as either mods\ep2.zip or as mods\ep2 (extracted folder.)
 
@@ -31,6 +45,11 @@ The motto of the EP is "The same, but better".  The textures here should look li
 ## Want to help?
 If you are interested in contributing replacement textures or models, then all faithful replacement textures or models are welcome, but please remember the motto of "the same, but better".
 
+
+
+## Licnece
+You are free to use and include models and textures from the EP in your Thief fan missions.  You are also allowed to modify them yourself for your FMs.
+You are NOT allowed to use them with Generative AI in any way.  They may not be modified by GenAI or fed into GenAI for training data.
 
 
 ## Credits
